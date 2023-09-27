@@ -1,0 +1,41 @@
+.main-menu-button {
+    width: 25vw;
+    height: 15vh;
+    position: relative;
+
+    background-color: rgb(0, 0, 0, .2);
+
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.main-menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.main-menu-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20%;
+    bottom: 60%;
+
+    /* border-top-left-radius: 30px; */
+    border-left: #007e87 solid .5vh;
+    border-top: #007e87 solid .5vh;
+}
+
+.main-menu-button::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+
+    /* border-bottom-right-radius: 30px; */
+    border-right: #007e87 solid .5vh;
+    border-bottom: #007e87 solid .5vh;
+}

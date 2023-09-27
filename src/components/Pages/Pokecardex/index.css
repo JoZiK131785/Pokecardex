@@ -1,0 +1,45 @@
+.home-main-panel {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-button {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50px;
+    border: none;
+    background-color: #00F0FF;
+    transition: ease-in .3s;
+    animation: animationMainButton 4s infinite;
+}
+
+.main-button:hover {
+    border: #00F0FF solid 2vw;
+    background-color: #ffffff;
+    animation: animationMainButtonHover .5s infinite;
+}
+
+@keyframes animationMainButtonHover {
+    0%, 100% {
+        background-color: #ffffff;
+    }
+    50% {
+        background-color: #000000;
+    }
+}
+
+@keyframes animationMainButton {
+    0%, 100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

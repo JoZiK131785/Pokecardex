@@ -1,7 +1,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: #11203C;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -9,5 +9,6 @@ body {
 #root {
   width: 100%;
   height: 100%;
-  padding-inline: 10vw;
+  padding-inline: 5vw;
+  padding-block: 5vh;
 }
