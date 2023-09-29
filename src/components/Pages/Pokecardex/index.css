@@ -13,10 +13,11 @@
     position: absolute;
     width: 5vw;
     height: 5vw;
+
     border-radius: 50px;
     border: none;
     background-color: #00F0FF;
-    transition: ease-in .3s;
+    transition: all .3s ease-in;
     animation: animationMainButton 4s infinite;
 }
 

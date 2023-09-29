@@ -1,10 +1,31 @@
 :root {
   /* COLOR */
   --color-black : #000000;
-  --color-black-shadow : rgba(0, 0, 0, .5);
+  --color-black-light-shadow : rgba(0, 0, 0, .2);
+  --color-black-shadow : rgba(0, 0, 0, .4);
   --color-white : #ffffff;
-  --color-white-shadow : rgba(255, 255, 255, 0.5);
+  --color-white-dark-shadow : rgba(255, 255, 255, 0.6);
 
   /* FONTS */
   --font-main : 'Black Ops One';
+  --regular-hover-font-size : 22px;
+  --regular-font-size : 18px;
 }
+
+/* #region ##### FONTS ##### */
+
+  /* #region BLACK-OPS-ONE FONT */
+
+    /* black-ops-one-regular - latin */
+    @font-face {
+      font-display: swap;
+      font-family: 'Black Ops One';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../public/fonts/black-ops-one-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+              url('../public/fonts/black-ops-one-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      }
+
+  /* #endregion */
+
+/* #endregion */

@@ -1,41 +1,145 @@
-.main-menu-button {
-    width: 25vw;
-    height: 15vh;
+.main-menu-button-open {
     position: relative;
+    width: 15vw;
+    height: 10vh;
 
-    background-color: rgb(0, 0, 0, .2);
+    background-color: var(--color-black-light-shadow);
 
     border: none;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
+
+    transition: all .1s ease-in-out;
+    animation: mainButtonOpen .5s ease-in;
 }
 
-.main-menu-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+@keyframes mainButtonOpen {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 15vw;
+        height: 0;
+    }
+    100% {
+        width: 15vw;
+        height: 10vh;
+    }
 }
 
-.main-menu-button::before {
+.main-menu-button-close {
+    position: relative;
+    width: 0;
+    height: 0;
+    padding: 0;
+
+    background-color: var(--color-black-light-shadow);
+
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    transition: all .1s ease-in-out;
+    animation: mainButtonClose .5s ease-out;
+}
+
+@keyframes mainButtonClose {
+    0% {
+        width: 15vw;
+        height: 10vh;
+    }
+    50% {
+        width: 15vw;
+        height: 1px;
+    }
+    100% {
+        width: 0;
+        height: 0;
+    }
+}
+
+.main-menu-button-open:hover {
+    width: 18vw;
+    height: 11.5vh;
+}
+
+.main-button-clicked {
+    position: relative;
+    width: 18vw;
+    height: 11.5vh;
+
+    background-color: var(--color-black-light-shadow);
+
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    transition: all .2s ease-in-out;
+    animation: mainButtonClicked .2s infinite;
+}
+
+@keyframes mainButtonClicked {
+    0% {
+        background-color: var(--color-black-light-shadow);
+    }
+    50% {
+        background-color: var(--color-white-dark-shadow);
+    }
+    100% {
+        background-color: var(--color-black-light-shadow);
+    }
+}
+
+.main-menu-button-open::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 20%;
-    bottom: 60%;
+    right: 100%;
+    bottom: 100%;
 
-    /* border-top-left-radius: 30px; */
-    border-left: #007e87 solid .5vh;
-    border-top: #007e87 solid .5vh;
+    border-left: none;
+    border-top: none;
+
+    transition: all .2s ease-in;
 }
 
-.main-menu-button::after {
+.main-menu-button-open:hover::before {
+    right: 20%;
+    bottom: 60%;
+    border-left: var(--color-black-shadow) solid .4vh;
+    border-top: var(--color-black-shadow) solid .4vh;
+}
+
+.main-menu-button-open::after {
     content: "";
     position: absolute;
-    top: 60%;
-    left: 20%;
+    top: 100%;
+    left: 100%;
     right: 0;
     bottom: 0;
 
-    /* border-bottom-right-radius: 30px; */
-    border-right: #007e87 solid .5vh;
-    border-bottom: #007e87 solid .5vh;
+    border-right: none;
+    border-bottom: none;
+
+    transition: all .2s ease-in;
+}
+
+.main-menu-button-open:hover::after {
+    left: 20%;
+    top: 60%;
+    border-right: var(--color-black-shadow) solid .4vh;
+    border-bottom: var(--color-black-shadow) solid .4vh;
+}
+
+.button-title {
+    font-family: var(--font-main);
+    font-size: var(--regular-font-size);
+
+    transition: all .1s ease-in;
+}
+
+.main-menu-button-open:hover .button-title {
+    font-size: var(--regular-hover-font-size);
 }
